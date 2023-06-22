@@ -1,0 +1,8 @@
+[run]
+source = ./gd
+
+[report]
+exclude_lines =
+    pragma: no cover
+
+ignore_errors = True

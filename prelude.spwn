@@ -1,0 +1,23 @@
+count_multi = (
+	item: @item,
+	number: @number = 0,
+	multi: @bool = true,
+) {
+	-> return @event::{
+		on_triggered: (function) => $.add( trigger{
+			obj_props.OBJ_ID: 1611,
+			obj_props.TARGET: function,
+			obj_props.COUNT: number,
+			obj_props.ACTIVATE_GROUP: true,
+			obj_props.ITEM: item,
+			obj_props.COUNT_MULTI_ACTIVATE: multi,
+		})
+	}
+}
+
+wait_frame = (tickk) {
+	on(count_multi(10i, tickk, multi = false), !{
+		11i.add(1)
+		-> return tickk + 1
+	})
+}

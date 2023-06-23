@@ -15,8 +15,6 @@ with open("../build/payload.bin", "rb") as f, open("../build/payload_b64.txt", "
 		c = l >> (i * 8) & 0xFF
 		if c == 0 or c == ord(',') or c == ord(';'):
 			l += 1 << (i * 8)
-			if i < b:
-				print("warning: a byte inside the actual size has been incremented. this is not tested", file=sys.stderr)
 			print(f"byte {i + 1} is invalid, incrementing by 1. length is now {l & ((1 << (b*8)) - 1)}, stored {l}", file=sys.stderr)
 	
 	eff = l & ((1 << (b*8)) - 1)

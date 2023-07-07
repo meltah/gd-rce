@@ -19,6 +19,6 @@ Then, simply run the build script (`b.sh`) and it will add the RCE into your lat
 
 This uses a specific version of gd.py (which is also patched), as others don't work with the weird encoding manipulation we do with the strings.
 
-# Writeup?
+# [Writeup?](./writeup.md)
 
-Soon™️
+[Writeup!](./writeup.md)
